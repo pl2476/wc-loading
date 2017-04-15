@@ -1,0 +1,9 @@
+{
+  "name": "wc-spinner",
+  "version": "1.0.0",
+  "description": "Vue Spinner",
+  "main": "dist/bundle.js",
+  "keywords": [],
+  "author": "linfeng123",
+  "license": "MIT"
+}

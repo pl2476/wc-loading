@@ -9,6 +9,7 @@ npm i wc-spinner --save
 ## Quick Start
 ```javascript
 import Spinner from 'wc-spinner'
+import 'wc-spinner/dist/spinner.css'
 Vue.use(Spinnner);
 ```
 ## API

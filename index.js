@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import SpinnerComponent from './SpinnerWithMaskComponent'
+// import SpinnerComponent from './SpinnerWithMaskComponent'
+import SpinnerComponent from './SpinnerComponent'
 import merge from './utils/merge'
 
 let instance;
