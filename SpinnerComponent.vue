@@ -1,4 +1,6 @@
-<style scoped>
+<!-- 效果来自:http://codepen.io/Mattykins/pen/wfJqk -->
+
+<style scoped lang="less">
 
 	/*父元素样式, 控制loading效果始终是在当前页面的中心*/
 	.spinner {
@@ -7,9 +9,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
-/*
-效果来自:http://codepen.io/Mattykins/pen/wfJqk
-*/
+
 a {
   position: fixed;
   bottom: 2%;
@@ -115,7 +115,7 @@ body {
 
 </style>
 <template>
-	<div class="spinner" v-show="showSpinner">
+	<div class="spinner" v-show="show">
 		<!-- replace here -->
 
 <div class='demo'>
@@ -143,7 +143,7 @@ body {
 		name: 'SpinnerComponent',
 		data () {
 			return {
-				showSpinner: true,
+				show: true,
 				content: '正在加载'
 			}
 		}

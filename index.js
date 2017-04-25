@@ -1,5 +1,4 @@
 import Vue from 'vue'
-// import SpinnerComponent from './SpinnerWithMaskComponent'
 import SpinnerComponent from './SpinnerComponent'
 import merge from './utils/merge'
 
@@ -21,10 +20,10 @@ let Spinner = {
 		}
 		options.content = content;
 		merge(instance.$data, options);
-		instance.showSpinner = true;
+		instance.show = true;
 	},
 	stop () {
-		instance.showSpinner = false;
+		instance.show = false;
 	}
 }
 

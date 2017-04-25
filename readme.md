@@ -1,5 +1,5 @@
 ## wc-spinner
-基于 Vue 的 spinner 效果
+基于 Vue 的 spinner 效果, 叫 spinner 不叫 loading, 是因为它专门指圆形的loading效果
 
 ## Installation
 ```shell
