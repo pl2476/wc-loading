@@ -140,12 +140,6 @@ body {
 </template>
 <script>
 	export default {
-		name: 'SpinnerComponent',
-		data () {
-			return {
-				show: true,
-				content: '正在加载'
-			}
-		}
+		name: 'SpinnerComponent'
 	}
 </script>

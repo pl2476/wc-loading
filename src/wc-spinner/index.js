@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import SpinnerComponent from './SpinnerComponent'
-import merge from './utils/merge'
 
 let instance;
 
@@ -8,18 +7,19 @@ let SpinnerConstructor = Vue.extend(SpinnerComponent);
 
 let initInstance = () => {
 	instance = new SpinnerConstructor({
-		el: document.createElement('div')
+		el: document.createElement('div'),
+		data: {
+			show: false // 之所以在这里定义, 为了方便模板的定义
+		}
 	});
 	document.body.appendChild(instance.$el);
 }
 
 let Spinner = {
-	start (content, options={}) {
+	start () {
 		if (!instance) {
 			initInstance();
 		}
-		options.content = content;
-		merge(instance.$data, options);
 		instance.show = true;
 	},
 	stop () {
