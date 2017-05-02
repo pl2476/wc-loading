@@ -7,10 +7,7 @@ let SpinnerConstructor = Vue.extend(SpinnerComponent);
 
 let initInstance = () => {
 	instance = new SpinnerConstructor({
-		el: document.createElement('div'),
-		data: {
-			show: false // 之所以在这里定义, 为了方便模板的定义
-		}
+		el: document.createElement('div')
 	});
 	document.body.appendChild(instance.$el);
 }

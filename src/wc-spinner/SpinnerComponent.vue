@@ -1,15 +1,11 @@
 <!-- 效果来自:http://codepen.io/Mattykins/pen/wfJqk -->
-
 <style scoped lang="less">
-
-	/*父元素样式, 控制loading效果始终是在当前页面的中心*/
-	.spinner {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
+.spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 a {
   position: fixed;
   bottom: 2%;
@@ -20,13 +16,11 @@ a {
   text-decoration: none !important;
   width: 100%;
 }
-
 body, html {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-
 body {
   background: -webkit-linear-gradient(left, #00b377, #00d68f);
   background: linear-gradient(90deg, #00b377, #00d68f);
@@ -34,16 +28,11 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
 .demo {
   width: 100px;
   height: 102px;
   border-radius: 100%;
-/*  position: absolute;
-  top: 45%;
-  left: calc(50% - 50px);
-*/}
-
+}
 .circle {
   width: 100%;
   height: 100%;
@@ -59,87 +48,85 @@ body {
   backgroudn-clip: padding;
   box-shadow: inset 0px 0px 10px rgba(0, 255, 170, 0.15);
 }
-
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .circle:nth-of-type(0) {
   -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .circle:nth-of-type(0) .inner {
   -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
-
 .circle:nth-of-type(1) {
   -webkit-transform: rotate(70deg);
-          transform: rotate(70deg);
+  transform: rotate(70deg);
 }
 .circle:nth-of-type(1) .inner {
   -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
-
 .circle:nth-of-type(2) {
   -webkit-transform: rotate(140deg);
-          transform: rotate(140deg);
+  transform: rotate(140deg);
 }
 .circle:nth-of-type(2) .inner {
   -webkit-animation: spin 2s infinite linear;
-          animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
-
 .demo {
   -webkit-animation: spin 5s infinite linear;
-          animation: spin 5s infinite linear;
+  animation: spin 5s infinite linear;
 }
-
 </style>
 <template>
 	<div class="spinner" v-show="show">
-		<!-- replace here -->
 
-<div class='demo'>
-  <div class='circle'>
-    <div class='inner'></div>
-  </div>
-  <div class='circle'>
-    <div class='inner'></div>
-  </div>
-  <div class='circle'>
-    <div class='inner'></div>
-  </div>
-  <div class='circle'>
-    <div class='inner'></div>
-  </div>
-  <div class='circle'>
-    <div class='inner'></div>
-  </div>
-</div>
+    <div class='demo'>
+      <div class='circle'>
+        <div class='inner'></div>
+      </div>
+      <div class='circle'>
+        <div class='inner'></div>
+      </div>
+      <div class='circle'>
+        <div class='inner'></div>
+      </div>
+      <div class='circle'>
+        <div class='inner'></div>
+      </div>
+      <div class='circle'>
+        <div class='inner'></div>
+      </div>
+    </div>
 
 	</div>
 </template>
 <script>
 	export default {
-		name: 'SpinnerComponent'
+		name: 'SpinnerComponent',
+    data () {
+      return {
+        show: false
+      }
+    }
 	}
 </script>

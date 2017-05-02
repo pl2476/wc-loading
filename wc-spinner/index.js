@@ -64,40 +64,22 @@ module.exports =
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var isExists = function isExists(val) {
-	if (typeof val !== 'undefined') {
-		return true;
-	}
-	return false;
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (function (src, target) {
-	for (var key in target) {
-		src[key] = isExists(target[key]) ? target[key] : src[key];
-	}
-});
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(5)
+__webpack_require__(4)
 
-var Component = __webpack_require__(6)(
+var Component = __webpack_require__(5)(
   /* script */
-  __webpack_require__(3),
+  __webpack_require__(2),
   /* template */
-  __webpack_require__(7),
+  __webpack_require__(6),
   /* scopeId */
   "data-v-6d833ff2",
   /* cssModules */
@@ -108,13 +90,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 2 */
+/* 1 */
 /***/ (function(module, exports) {
 
 module.exports = require("vue");
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -261,27 +243,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	name: 'SpinnerComponent',
-	data: function data() {
-		return {
-			show: true,
-			content: '正在加载'
-		};
-	}
+	name: 'SpinnerComponent'
 });
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SpinnerComponent__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SpinnerComponent__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__SpinnerComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__SpinnerComponent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_merge__ = __webpack_require__(0);
-
 
 
 
@@ -291,20 +265,19 @@ var SpinnerConstructor = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.extend(__WE
 
 var initInstance = function initInstance() {
 	instance = new SpinnerConstructor({
-		el: document.createElement('div')
+		el: document.createElement('div'),
+		data: {
+			show: false // 之所以在这里定义, 为了方便模板的定义
+		}
 	});
 	document.body.appendChild(instance.$el);
 };
 
 var Spinner = {
-	start: function start(content) {
-		var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
+	start: function start() {
 		if (!instance) {
 			initInstance();
 		}
-		options.content = content;
-		__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__utils_merge__["a" /* default */])(instance.$data, options);
 		instance.show = true;
 	},
 	stop: function stop() {
@@ -321,13 +294,13 @@ var Spinner = {
 });
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -384,7 +357,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
