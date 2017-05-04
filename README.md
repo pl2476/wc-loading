@@ -16,9 +16,8 @@ export default {
 		Spinner
 	}
 }
-```
-```html
-	<spinner :show="show" :text="text">
+
+<spinner :show="show" :text="text">
 ```
 
 ## LICENSE
