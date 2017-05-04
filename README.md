@@ -1,18 +1,25 @@
 ## wc-spinner
 基于 Vue 的 spinner 效果
 
-## Intro 说明
-默认提供了一个比较炫酷的效果, 一般肯定不会使用这个, 所以建议在当前代码的基础上二次开发
+## 已经存在的效果的列表
+1. Spinner1: 一个特别炫酷的效果, 来自于http://codepen.io/Mattykins/pen/wfJqk
+2. Spinner2: 一个最普通的 spinner效果, 就是一个空白页面, 中间有一个菊花图
 
-步骤:
-1. 下载当前仓库
-2. 拿出来src/wc-spinner 目录, 放到项目中就可以了.
+## 使用方式
+下载这个仓库, 找到 src/wc-spinner 目录, 拷贝到项目中
+在需要有 spinner 效果的页面中:
+```javascript
+import Spinner from './wc-spinner/Spinner1'
 
-你也可以直接克隆当前项目, 
-cd 仓库
-npm i
-npm run dev
-
+export default {
+	components: {
+		Spinner
+	}
+}
+```
+```html
+	<spinner :show="show" :text="text">
+```
 
 ## LICENSE
 [MIT](https://opensource.org/licenses/MIT)

@@ -122,11 +122,12 @@ body {
 </template>
 <script>
 	export default {
-		name: 'SpinnerComponent',
-    data () {
-      return {
-        show: false
-      }
-    }
+		name: 'Spinner',
+		props: {
+			show: {
+				type: Boolean,
+				default: true
+			}
+		}
 	}
 </script>
