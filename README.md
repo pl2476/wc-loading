@@ -1,23 +1,21 @@
-## wc-spinner
-基于 Vue 的 spinner 效果
+## wc-loading
+基于 Vue 的 loading 效果, 自定义的 loading 元素
 
 ## 已经存在的效果的列表
-1. Spinner1: 一个特别炫酷的效果, 来自于http://codepen.io/Mattykins/pen/wfJqk
-2. Spinner2: 一个最普通的 spinner效果, 就是一个空白页面, 中间有一个菊花图
+1. loading1: 一个特别炫酷的效果, 来自于http://codepen.io/Mattykins/pen/wfJqk
+
+2. loading2: 没有遮罩层, 中间是一圈点点的
+
+3. loading3: 最常见的, 带遮罩层, 中间还有一个菊花图的
+有两个配置选项
+	<loading :loading="true" :text="xxx">
 
 ## 使用方式
-下载这个仓库, 找到 src/wc-spinner 目录, 拷贝到项目中
-在需要有 spinner 效果的页面中:
+1. 下载仓库, 直接将仓库放到组件中, 再引入即可
 ```javascript
-import Spinner from './wc-spinner/Spinner1'
+import Loading from './components/wc-loading'
 
-export default {
-	components: {
-		Spinner
-	}
-}
-
-<spinner :show="show" :text="text">
+<loading/>
 ```
 
 ## LICENSE

@@ -1,6 +1,6 @@
 <!-- 效果来自:http://codepen.io/Mattykins/pen/wfJqk -->
 <style scoped lang="less">
-.spinner {
+.loading {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -98,7 +98,7 @@ body {
 }
 </style>
 <template>
-	<div class="spinner" v-show="show">
+	<div class="loading" v-show="show">
 
     <div class='demo'>
       <div class='circle'>
@@ -122,7 +122,7 @@ body {
 </template>
 <script>
 	export default {
-		name: 'Spinner',
+		name: 'loading',
 		props: {
 			show: {
 				type: Boolean,
