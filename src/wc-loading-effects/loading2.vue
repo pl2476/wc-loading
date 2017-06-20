@@ -8,7 +8,7 @@
 
 </style>
 <template>
-	<div v-show="loading">
+	<div v-show="show">
       <div class="loading">
          <img src="./imgs/ajax-loader.gif" alt="">
       </div>
@@ -17,10 +17,9 @@
 <script>
   export default {
     name: 'loading',
-    props: {
-      loading: {
-        type: Boolean,
-        default: true
+    data () {
+      return {
+        show: false
       }
     }
   }

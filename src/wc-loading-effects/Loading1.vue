@@ -99,7 +99,6 @@ body {
 </style>
 <template>
 	<div class="loading" v-show="show">
-
     <div class='demo'>
       <div class='circle'>
         <div class='inner'></div>
