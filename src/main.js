@@ -6,7 +6,7 @@ import Loading from './wc-loading'
 
 Vue.use(Loading, {
 	component: LoadingComponent,
-	rgba: 'rgba(0,0,0,0.5)'
+	// rgba: 'rgba(0,0,0,0.5)'
 });
 
 new Vue({

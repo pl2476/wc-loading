@@ -26,26 +26,26 @@
   }
 </style>
 <template>
-	<div v-show="loading">
+	<!-- <div v-show="loading"> -->
       <div class="loading">
          <img src="./imgs/juhua.gif" alt="">
          <p class="text">{{text}}</p>
       </div>
-      <div class="loading-mask"></div>
-	</div>
+      <!-- <div class="loading-mask"></div> -->
+	<!-- </div> -->
 </template>
 <script>
   export default {
     name: 'loading',
-    props: {
-      loading: {
-        type: Boolean,
-        default: true
-      },
-      text: {
-        type: String,
-        default: '正在加载...'
-      }      
-    }
+    // props: {
+    //   loading: {
+    //     type: Boolean,
+    //     default: true
+    //   },
+    //   text: {
+    //     type: String,
+    //     default: '正在加载...'
+    //   }      
+    // }
   }
 </script>

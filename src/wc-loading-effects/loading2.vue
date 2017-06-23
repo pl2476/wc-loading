@@ -8,19 +8,19 @@
 
 </style>
 <template>
-	<div v-show="show">
+	<!-- <div v-show="show"> -->
       <div class="loading">
          <img src="./imgs/ajax-loader.gif" alt="">
       </div>
-	</div>
+	<!-- </div> -->
 </template>
 <script>
   export default {
     name: 'loading',
-    data () {
-      return {
-        show: false
-      }
-    }
+    // data () {
+    //   return {
+    //     show: false
+    //   }
+    // }
   }
 </script>

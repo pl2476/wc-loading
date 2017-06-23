@@ -11,8 +11,7 @@
 npm i wc-loading --save
 ```
 ```javascript
-// 用户自定义的 loading 效果集合
-// 路径为 用户放置 loading 的路径
+// 引入用户自定义的 loading 效果
 import LoadingComponent from './user-path/loading'
 
 import Loading from 'wc-loading'
@@ -24,6 +23,9 @@ Vue.use(Loading, {
 ```javasript
 this.$loading.start() // 打开 loading
 this.$loading.stop()  // 隐藏 loading
+
+也可以向 start 传递 component, 用来做到某个页面的定制化 loading
+
 ```
 
 ## 用户自定义 LoadingComponent 的要求

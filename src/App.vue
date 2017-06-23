@@ -51,9 +51,10 @@
   </div>
 </template>
 <script>
+  import LoadingComponent from './wc-loading-effects/loading2'
   export default {
     mounted () {
-      this.$loading.start();
+      this.$loading.start(LoadingComponent);
 
       // setTimeout(()=>{
       //   this.$loading.stop();

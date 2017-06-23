@@ -11,8 +11,9 @@ let forbiddenScroll = e => e.preventDefault();
 
 let loading = {
 	// 显示 loading 
-    start() {
-        let LoadingConstructor = Vue.extend(globalConfig.component);
+    // 如果 start 传递了 component 那么就使用它.
+    start(component) {
+        let LoadingConstructor = Vue.extend(component || globalConfig.component);
         let initInstance = () => {
             instance = new LoadingConstructor({
                 el: document.createElement('div')
@@ -22,7 +23,7 @@ let loading = {
             parent.appendChild(instance.$el);
 
             // add center class
-            instance.$el.classList.add('wc-loading__center')
+            instance.$el.classList.add('wc-loading__center');
 
             instance.$el = parent;
             document.body.appendChild(instance.$el);
