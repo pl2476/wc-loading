@@ -16,7 +16,8 @@ import LoadingComponent from './user-path/loading'
 
 import Loading from 'wc-loading'
 Vue.use(Loading, {
-	component: LoadingComponent
+	component: LoadingComponent,
+	rgba: 'rgba(0,0,0,0.5)'  // 设置遮罩层颜色 + 透明度
 })
 ```
 ### 调用方式
@@ -24,40 +25,28 @@ Vue.use(Loading, {
 this.$loading.start() // 打开 loading
 this.$loading.stop()  // 隐藏 loading
 
-也可以向 start 传递 component, 用来做到某个页面的定制化 loading
-
+可以向 start 传递 component, 用来做到某个页面的定制化 loading
+默认提供了一个 loading 效果.
 ```
 
-## 用户自定义 LoadingComponent 的要求
-* 代码里面做了处理, 用户仅仅只需要关系, 真正 loading 效果的实现即可, 遮罩层不需要考虑.
-所以 LoadingComponent 的正确格式是:
-```html
-	<tempalte>
-		.loading // 这个就是正中央的, 那个 loading, 只要关注这个就行了
-	</template>
-```
 
-* 我认为, 当 loading 出现的时候, 页面处于锁死状态, 即: 不可点击, 不可滚动, 不能进行任何操作.
-所以在出现 loading 效果的时候:
-	* 为组件的根元素默认加上一个 lock class
-	* lock class 的定义如下
-		```css
-			.wc-loading-lock {
-				
-			}
-		```
-* 有时候, 可能需要一个带遮罩层的 loading 效果, 而因为 lock class 实际上就是一个透明度为0的
-遮罩层, 所以我们只要改变它的 reba, 就可以实现的遮罩效果. 为此, 抽离出来一个配置遮罩层的属性:
+## 用户自定义 Loading 的要求
+* 用户自定义loading.vue 文件, 格式应该如下
 ```javascript
- {
- 	rgba: rgba(0, 0, 0, 0.5);
- }
+<style>
+</style>
+<template>
+	.loading-ele
+</template>
+<script>
+	exports {
+		// 这里为空, 为空就行了
+	}
+</script>
 ```
 
-
-* 默认我们认为, loading 的位置都是在正中央, 所以提供了一个默认的class, 暂时没有给定接口取消.
-
-
+## 特点
+* 当 loading 出现的时候, 页面处于锁死状态, 即: 不可点击, 不可滚动, 不能进行任何操作.
 
 ## 预定义的 loading 效果的集合
 ![wc-loading-effects](https://opensource.org/licenses/MIT)

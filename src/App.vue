@@ -51,13 +51,13 @@
   </div>
 </template>
 <script>
-  import LoadingComponent from './wc-loading-effects/loading2'
   export default {
     mounted () {
-      this.$loading.start(LoadingComponent);
+      this.$loading.start();
 
       // setTimeout(()=>{
       //   this.$loading.stop();
+      //   this.$toast('操作成功')
       // },2000)
       
       

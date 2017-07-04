@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import merge from './wc-utils/merge'
-import preventPageScroll from './wc-utils/prevent-page-scroll'
+import merge from 'wc-utils/merge'
+import preventPageScroll from 'wc-utils/prevent-page-scroll'
 
 import './css/base.css'
 
@@ -13,6 +13,7 @@ let loading = {
 	// 显示 loading 
     // 如果 start 传递了 component 那么就使用它.
     start(component) {
+
         let LoadingConstructor = Vue.extend(component || globalConfig.component);
         let initInstance = () => {
             instance = new LoadingConstructor({

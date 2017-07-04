@@ -1,13 +1,17 @@
 import Vue from 'vue'
 import App from './App'
 
-import LoadingComponent from './wc-loading-effects/Loading1'
+import LoadingComponent from './wc-loading/wc-loading-effects/Loading-Option'
 import Loading from './wc-loading'
 
 Vue.use(Loading, {
-	component: LoadingComponent,
-	// rgba: 'rgba(0,0,0,0.5)'
+	component: LoadingComponent
 });
+
+import {Toast} from 'wc-messagebox'
+import 'wc-messagebox/style.css'
+Vue.use(Toast);
+
 
 new Vue({
     el: '#app',
