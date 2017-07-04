@@ -10,11 +10,17 @@ let instance;
 let forbiddenScroll = e => e.preventDefault();
 
 let loading = {
-	// 显示 loading 
-    // 如果 start 传递了 component 那么就使用它.
-    start(component) {
 
-        let LoadingConstructor = Vue.extend(component || globalConfig.component);
+    start(who) {
+        // 如果用户没有提前配置 loading, 报错
+        if (typeof who === 'undefined') {
+            who = 'default';
+        }
+        if (typeof globalConfig[who] === 'undefined') {
+            throw new Error('wc-loading: please config loading effects');
+        }
+
+        let LoadingConstructor = Vue.extend(globalConfig[who]);
         let initInstance = () => {
             instance = new LoadingConstructor({
                 el: document.createElement('div')

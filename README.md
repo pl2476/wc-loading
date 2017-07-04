@@ -16,7 +16,8 @@ import LoadingComponent from './user-path/loading'
 
 import Loading from 'wc-loading'
 Vue.use(Loading, {
-	component: LoadingComponent,
+	'default': LoadingComponent1,
+	'page': LoadingComponent2, // 设置不同情景下的loading 组件
 	rgba: 'rgba(0,0,0,0.5)'  // 设置遮罩层颜色 + 透明度
 })
 ```
@@ -25,13 +26,11 @@ Vue.use(Loading, {
 this.$loading.start() // 打开 loading
 this.$loading.stop()  // 隐藏 loading
 
-可以向 start 传递 component, 用来做到某个页面的定制化 loading
-默认提供了一个 loading 效果.
 ```
 
 
 ## 用户自定义 Loading 的要求
-* 用户自定义loading.vue 文件, 格式应该如下
+用户自定义loading.vue 文件, 格式应该如下
 ```javascript
 <style>
 </style>
@@ -46,10 +45,8 @@ this.$loading.stop()  // 隐藏 loading
 ```
 
 ## 特点
-* 当 loading 出现的时候, 页面处于锁死状态, 即: 不可点击, 不可滚动, 不能进行任何操作.
+当 loading 出现的时候, 页面处于锁死状态, 即: 不可点击, 不可滚动, 不能进行任何操作.
 
-## 预定义的 loading 效果的集合
-![wc-loading-effects](https://opensource.org/licenses/MIT)
 
 ## LICENSE
 [MIT](https://opensource.org/licenses/MIT)
