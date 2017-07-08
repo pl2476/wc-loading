@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import App from './App'
 
-import LoadingComponent from './wc-loading/wc-loading-effects/Loading-Option'
-import LoadingPage from './wc-loading/wc-loading-effects/Loading-Page'
+import LoadingComponent from './wc-loading-effects/Loading-Option'
+import LoadingPage from './wc-loading-effects/Loading-Circle2'
 import Loading from './wc-loading'
 
 Vue.use(Loading, {
-	'default': LoadingComponent,
+	default: LoadingPage,
 	page: LoadingPage,
-	rgba: 'rgba(0,0,0,0.3)'
+	// rgba: 'rgba(0,0,0,0.3)'
 });
 
 import {Toast} from 'wc-messagebox'

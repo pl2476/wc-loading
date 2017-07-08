@@ -55,11 +55,11 @@
     mounted () {
       this.$loading.start();
 
-      setTimeout(()=>{
-        this.$loading.stop();
-        this.$toast('操作成功');
-        this.$loading.start('page')
-      },2000)
+      // setTimeout(()=>{
+      //   this.$loading.stop();
+      //   this.$toast('操作成功');
+      //   this.$loading.start('page')
+      // },2000)
       
       
     },

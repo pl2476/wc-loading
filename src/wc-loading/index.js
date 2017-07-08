@@ -2,7 +2,7 @@ import Vue from 'vue'
 import merge from 'wc-utils/merge'
 import preventPageScroll from 'wc-utils/prevent-page-scroll'
 
-import './css/base.css'
+import './css/style.css'
 
 let globalConfig = {};
 let instance;
