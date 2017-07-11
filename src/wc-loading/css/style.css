@@ -1,17 +1,24 @@
 .wc-loading__lock {
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0);
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1001;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1001;
 }
-.wc-loading__center{
+.wc-loading__center {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
+}
+.wc-fade-enter {
+  opacity: 0;
+}
+.wc-fade-enter-active {
+  transition: opacity .8s;
+}
+.wc-fade-leave-active {
+  opacity: 0;
+  transition: opacity .8s;
 }

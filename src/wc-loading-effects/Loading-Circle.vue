@@ -1,5 +1,12 @@
 <style scoped lang="less">
 .spinner {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+
+    
     font-size: 60px;
     width: 1em;
     height: 1em;

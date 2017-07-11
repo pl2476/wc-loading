@@ -1,6 +1,6 @@
 {
     "name": "wc-loading",
-    "version": "1.0.4",
+    "version": "1.0.9",
     "description": "Vue plugins | loading",
     "main": "index.js",
     "keywords": [
